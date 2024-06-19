@@ -12,7 +12,7 @@ public class ConversorController {
     @GetMapping("/")
     public ModelAndView showConversorForm(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("Conversor");
+        modelAndView.setViewName("conversor");
         return modelAndView;
     }
     @PostMapping("calculate")
@@ -29,6 +29,6 @@ public class ConversorController {
              break;
      }
      model.addAttribute("result", result);
-     return "Conversor";
+     return "conversor";
     }
 }

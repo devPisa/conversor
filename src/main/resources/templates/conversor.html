@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/styleConversor.css">
+    <title>Conversor</title>
+  </head>
+  <body>
+  <header class="card">
+    <h1>Conversor</h1>
+    <form th:action="@{/calculate}" method="post">
+      <input type="number" name="temp" required />
+      <select name="select">
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+      </select>
+      <button type="submit">Converter</button>
+    </form>
+    <div th:if="${result != null}">
+      <h2>Temperatura: <span th:text="${result}"></span></h2>
+    </div>
+  </header>
+  </body>
+</html>
